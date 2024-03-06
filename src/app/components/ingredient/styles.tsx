@@ -12,9 +12,23 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 6,
   },
-  title: {},
+  title: {
+    fontSize: theme.fonts.size.body.sm,
+    fontFamily: theme.fonts.family.medium,
+  },
   image: {
-    width: 20,
-    height: 20,
+    width: 16,
+    height: 16,
+  },
+  selected: {
+    borderWidth: 2,
+    borderColor: theme.colors.green_600,
+    backgroundColor: theme.colors.green_100,
+    borderRadius: theme.borderRadius.full,
+    paddingHorizontal: 16,
+    height: 42,
+    alignItems: 'center',
+    flexDirection: 'row',
+    gap: 6,
   },
 })
