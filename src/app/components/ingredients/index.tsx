@@ -1,11 +1,15 @@
-import { Pressable, Text, Image } from 'react-native'
+import { ScrollView } from 'react-native'
+
+import { Ingredient } from '../ingredient'
+
 import { styles } from './styles'
 
-export default function Ingredient() {
+export function Ingredients() {
   return (
-    <Pressable style={styles.container}>
-      <Image source={require('@/assets/maca.png')} style={styles.image} />
-      <Text style={styles.title}>Maça</Text>
-    </Pressable>
+    <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
+      {Array.from({ length: 100 }).map((_, index) => (
+        <Ingredient key={index} />
+      ))}
+    </ScrollView>
   )
 }
