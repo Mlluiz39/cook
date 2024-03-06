@@ -13,7 +13,6 @@ export function Ingredients() {
       return setSelected(prev => prev.filter(item => item !== value))
     }
     setSelected([...selected, value])
-    console.log(selected)
   }
 
   return (
