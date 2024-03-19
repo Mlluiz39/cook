@@ -4,6 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 
 import { styles } from './styles'
 import { theme } from '@/theme'
+import { Button } from '../Button'
 
 type Props = {
   quantity: number
@@ -27,6 +28,7 @@ export default function Selected({ quantity, onSearch, onClear }: Props) {
           onPress={onClear}
         />
       </View>
+      <Button title="Buscar Receitas" onPress={onSearch} />
     </Animated.View>
   )
 }

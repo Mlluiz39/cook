@@ -5,6 +5,7 @@ import { Ingredient } from '../ingredient'
 import { styles } from './styles'
 import { useState } from 'react'
 import Selected from '../selected'
+import { router } from 'expo-router'
 
 export function Ingredients() {
   const [selected, setSelected] = useState<string[]>([])
@@ -25,6 +26,10 @@ export function Ingredients() {
         { text: 'Limpar', onPress: () => setSelected([]) },
       ]
     )
+  }
+
+  function handleSearch() {
+    router.navigate('/recipes')
   }
 
   return (
@@ -49,7 +54,7 @@ export function Ingredients() {
       {selected.length > 0 && (
         <Selected
           quantity={selected.length}
-          onSearch={() => {}}
+          onSearch={handleSearch}
           onClear={handleClearSelected}
         />
       )}
