@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
     marginBottom: 12,
   },
   title: {
-    fontSize: 18,
+    fontSize: theme.fonts.size.heading.md,
     fontFamily: theme.fonts.family.bold,
+    marginTop: 22,
   }
 })
